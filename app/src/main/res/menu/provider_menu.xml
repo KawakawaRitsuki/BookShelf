@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/item1"
+        android:title="登録が古い順">
+    </item>
+    <item
+        android:id="@+id/item2"
+        android:title="登録が新しい順">
+    </item>
+    <item
+        android:id="@+id/item3"
+        android:title="タイトル昇順">
+    </item>
+    <item
+        android:id="@+id/item4"
+        android:title="タイトル降順">
+    </item>
+    <item
+        android:id="@+id/item5"
+        android:title="作者昇順">
+    </item>
+    <item
+        android:id="@+id/item6"
+        android:title="作者降順">
+    </item>
+</menu>

@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.hugo'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.kawakawaplanning.bookshelf"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.jniLibs.srcDirs = ['libs']
+        test.jniLibs.srcDirs = ['libs']
+    }
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.jakewharton.hugo:hugo-plugin:1.2.1'
+    }
+}
+
+repositories{
+    mavenCentral()
+    maven{url "https://oss.sonatype.org/content/repositories/snapshots"}
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:multidex:1.0.1'
+
+    compile 'com.michaelpardo:activeandroid:+'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.getbase:floatingactionbutton:1.10.1'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.isseiaoki:simplecropview:1.0.16'
+}
