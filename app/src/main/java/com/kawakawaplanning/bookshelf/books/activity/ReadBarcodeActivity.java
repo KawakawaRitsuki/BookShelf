@@ -114,15 +114,7 @@ public class ReadBarcodeActivity extends AppCompatActivity {
                             setResult(RESULT_OK);
                         }else{
                             Intent intent = new Intent();
-                            intent.setClass(ReadBarcodeActivity.this,AddBookInputActivity.class);
-                            intent.putExtra("title", book.title);
-                            intent.putExtra("titleKana", book.titleKana);
-                            intent.putExtra("author", book.author);
-                            intent.putExtra("isbn", book.isbn);
-                            intent.putExtra("kan", book.kan);
-                            intent.putExtra("publisher", book.publisher);
-                            intent.putExtra("label", book.label);
-                            intent.putExtra("image", book.image);
+                            intent.setClass(ReadBarcodeActivity.this, AddBookInputActivity.class);
                             startActivity(intent);
 
 

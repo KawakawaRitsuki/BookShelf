@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("publisher", book.publisher);
                 intent.putExtra("label", book.label);
                 intent.putExtra("image", book.image);
+                intent.putExtra("id", book.getId());
 
                 startActivity(intent);
             }
